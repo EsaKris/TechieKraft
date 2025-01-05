@@ -1,0 +1,407 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechieTeen connects high school students with opportunities in digital technology to lead, innovate, and succeed. Inspiring the next generation of tech innovators.">
+  <meta name="keywords" content="tech, education, high school, digital technology, innovation, coding, computer science, techie, teen, career opportunities">
+  <meta name="author" content="Esa Kris, esachris00@gmail.com">
+  <meta name="publisher" content="The New Wine, stylezgraphics@gmail.com">
+  <meta name="contact" content="Phone: 09155775787">
+  
+  <title>TechieTeen - Inspiring Tomorrow’s Innovators, Today</title>
+  <link rel="canonical" href="https://techieteen.onrender.com">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="TechieTeen - Inspiring the Next Generation of Innovators">
+  <meta property="og:description" content="TechieTeen connects high school students with opportunities in digital technology to lead, innovate, and succeed.">
+  <meta property="og:image" content="https://techieteen.onrender.com/images/card.png">
+  <meta property="og:url" content="https://techieteen.onrender.com">
+  <meta property="og:author" content="Esa Kris, esachris00@gmail.com">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TechieTeen - Inspiring the Next Generation of Innovators">
+  <meta name="twitter:description" content="TechieTeen connects high school students with opportunities in digital technology to lead, innovate, and succeed.">
+  <meta name="twitter:image" content="https://techieteen.onrender.com/images/card.png">
+  <meta name="twitter:author" content="Esa Kris, esachris00@gmail.com">
+  <!-- Favicon -->
+  <link rel="icon" href="https://techieteen.onrender.com/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://techieteen.onrender.com/images/favicon.ico" sizes="32x32">
+  <link rel="icon" href="https://techieteen.onrender.com/images/favicon.ico" sizes="192x192">
+  <link rel="apple-touch-icon" href="https://techieteen.onrender.com/images/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+</head>
+<body class="bg-gray-100">
+<!-- Navbar -->
+<div class="navbar fixed top-2 left-1/2 transform -translate-x-1/2 bg-gray-800 rounded-lg shadow-md w-10/12 max-w-8xl py-3 px-4 flex justify-between items-center z-50">
+  <!-- Logo -->
+  <div class="flex items-center space-x-3">
+    <a href="#" class="flex items-center space-x-2">
+      <img src="{% static 'Home/images/logoo.png' %}" alt="Logo" class="h-8 w-8">
+      <span class="text-white font-semibold text-xl">TechieTeen</span>
+    </a>
+  </div>
+  <!-- Desktop Navigation Links -->
+  <div class="hidden md:flex flex-grow justify-evenly items-center">
+    <ul class="flex justify-evenly flex-grow">
+      <li><a href="#home" class="text-white hover:bg-gray-600 block px-3 py-2 rounded">Home</a></li>
+      <li><a href="#about" class="text-white hover:bg-gray-600 block px-3 py-2 rounded">About</a></li>
+      <li><a href="#contact-us" class="text-white hover:bg-gray-600 block px-3 py-2 rounded">Contact</a></li>
+    </ul>
+    <!-- Register Button -->
+    <a href="{% url 'register' %}">
+      <button class="bg-blue-800 hover:bg-blue-600 text-white px-6 py-2 rounded">
+        Register
+      </button>
+    </a>
+  </div>
+
+  <!-- Mobile Navigation (Hamburger Button) -->
+  <div class="md:hidden flex items-center space-x-4">
+    <a href="{% url 'register' %}">
+      <button class="bg-blue-800 hover:bg-blue-600 text-white px-6 py-2 rounded">
+        Register
+      </button>
+    </a>
+    <button id="hamburger" class="text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden hidden bg-gray-800 w-full py-4 absolute top-20 left-0">
+  <ul class="space-y-4 text-center">
+    <li><a href="#home" class="text-white hover:bg-gray-600 block px-3 py-2 rounded">Home</a></li>
+    <li><a href="#about" class="text-white hover:bg-gray-600 block px-3 py-2 rounded">About</a></li>
+    <li><a href="#contact-us" class="text-white hover:bg-gray-600 block px-3 py-2 rounded">Contact</a></li>
+  </ul>
+</div>
+
+  <!-- Hero Section -->
+  <section class="hero-section mt-28 px-6 md:px-12 lg:px-24 py-12 bg-white">
+    <div class="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
+      <!-- Left Content -->
+      <div class="text-content max-w-lg mb-12 lg:mb-0">
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-800 leading-tight mb-6">
+          Inspiring Tomorrow’s Innovators, Today
+        </h1>
+        <p class="text-gray-600 text-lg mb-6">
+          TechieTeen bridges the gap between education and technology. From guiding students into the world of digital innovation to helping educators and school owners adopt cutting-edge tools, TechieTeen is your partner in shaping the future of education. Elevate your school, book a free session with us.
+        </p>
+        <!-- <button class="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-3 rounded-lg">
+          Get Started
+        </button> -->
+        <div class="flex space-x-4 mt-6">
+          <a href="https://www.instagram.com/techiekraft/" class="text-blue-800 hover:text-blue-600">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/chi-soft-tech/" class="text-blue-800 hover:text-blue-600">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://web.facebook.com/techiekraft/?_rdc=1&_rdr#" class="text-blue-800 hover:text-blue-600">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Images (Removed for mobile) -->
+      <div class="hidden md:grid grid-cols-2 gap-4 mb-6 lg:mb-0">
+        <img src="{% static 'Home/images/tech ses.png' %}" alt="Tech Session" class="h-56 w-56 object-cover rounded-lg shadow-lg">
+        <img src="{% static 'Home/images/download (2).png' %}" alt="Innovative Learning" class="h-56 w-56 object-cover rounded-lg shadow-lg">
+        <img src="{% static 'Home/images/team co.png' %}" alt="Team Collaboration" class="h-56 w-56 object-cover rounded-lg shadow-lg">
+        <img src="{% static 'Home/images/student successs.png' %}" alt="Student Success" class="h-56 w-56 object-cover rounded-lg shadow-lg"> 
+    </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section py-20 bg-gray-50" id="about">
+    <div class="container mx-auto px-6 lg:px-24">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">About TechieTeen</h2>
+      
+      <div class="flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0">
+        <!-- Image: Portrait and equal size on desktop -->
+        <div class="w-full lg:w-1/2 mb-6 lg:mb-0 lg:mr-12">
+            <img src="{% static 'Home/images/team co.png' %}" alt="TechieTeen Team" class="w-95 h-95 object-cover rounded-lg shadow-lg max-h-96 mx-auto">        
+        </div>
+
+        <!-- Text: Justified alignment with equal size -->
+        <div class="w-full lg:w-1/2 text-justify space-y-6">
+          <h3 class="text-3xl font-semibold text-gray-800 mb-4">Who We Are</h3>
+          <p class="text-lg text-gray-600">
+            TechieTeen is a flagship program by the Learning Arm of Techiekraft, designed to empower high school students, teachers, and school administrators with knowledge about the boundless opportunities in digital technology.
+          </p>
+          <p class="text-lg text-gray-600">
+          
+            The program introduces students to various tech fields, helping them see how they can position themselves for future careers in digital technology. For teachers and school owners, TechieTeen demonstrates the immense benefits of adopting digital tools to streamline school management, making day-to-day operations more efficient.
+          </p>
+          <a href="{% url 'register' %}">
+            <button class="bg-blue-800 hover:bg-blue-600  text-white px-8 py-3 rounded-lg text-lg">Register Now</button>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Why Choose Us Section -->
+<section class="why-choose-us py-20 bg-gray-100" id="why">
+  <div class="container mx-auto px-6 lg:px-24">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Why TechieTeen?</h2>
+    <p class="text-xl text-center text-gray-600 mb-12">
+      TechieTeen stands out as a one-of-a-kind program that combines education, empowerment, and opportunity:
+    </p>
+
+    <!-- Updated Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+      <!-- Card 1: Live Engagement -->
+      <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-12 w-12 mx-auto text-blue-500">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v2a5 5 0 0 0 5 5h4a5 5 0 0 0 5-5V3M6 12h12m-6 0v6m6 0h2a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-1m-6 0h-2a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Live Engagement</h3>
+        <p class="text-gray-600">
+          Unlike conventional programs, TechieTeen provides a hands-on, live interaction that ensures students actively engage with real world insights.
+        For teachers and school owners, it shows them a first hand practical on how these digital tools work and how to effectively use them.
+        </p>
+        <p class="text-gray-600">
+          </p>
+
+      </div>
+
+      <!-- Card 2: Exposure to Opportunities -->
+      <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-12 w-12 mx-auto text-blue-500">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 4h-3v9h-2V6H8l4-4zM4 18h16a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Exposure to Opportunities</h3>
+        <p class="text-gray-600">
+          By introducing students to technology early, they are better positioned to become the innovators and leaders of tomorrow.
+        </p>
+      </div>
+
+      <!-- Card 3: Early Preparation for the Future -->
+      <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-12 w-12 mx-auto text-blue-500">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-5M9 5V2m0 3h6m1 4h3m0-4v4M5 11h3m-3 4h3" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Capacity building for Teachers</h3>
+        <p class="text-gray-600">
+          Teachers have the opportunity to upskills theirsleves from the session and turn out to be more productive.
+        </p>
+      </div>
+
+      <!-- Card 4: Global Recognition -->
+      <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-12 w-12 mx-auto text-blue-500">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 4h-3v9h-2V6H8l4-4zM4 18h16a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Global Recognition</h3>
+        <p class="text-gray-600">
+          Supported by partners like Winumu, Lampnets Solutions, and School360 LMS, TechieTeen offers students and schools exposure to globally accredited opportunities, partnerships, and tools.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What to Expect Section -->
+<section class="what-to-expect py-20 bg-gray-50">
+  <div class="container mx-auto px-6 lg:px-24">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">What to Expect from TechieTeen</h2>
+    
+    <!-- For Students -->
+    <div class="mb-16">
+      <h3 class="text-3xl font-semibold text-gray-800 mb-6">For Students</h3>
+      <ul class="list-disc list-inside space-y-4 text-lg text-gray-600">
+        <li class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-green-500 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Inspiring Sessions: Hands-on, interactive discussions to help students see the vast opportunities in the tech ecosystem.
+        </li>
+        <li class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-green-500 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Career Guidance: Practical advice on how to position themselves in various digital fields.
+        </li>
+        <li class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-green-500 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Scholarships and Incentives: Access to scholarships and resources from TechieTeen partners.
+        </li>
+      </ul>
+    </div>
+
+    <!-- For Teachers and School Owners -->
+    <div>
+      <h3 class="text-3xl font-semibold text-gray-800 mb-6">For Teachers and School Owners</h3>
+      <ul class="list-disc list-inside space-y-4 text-lg text-gray-600">
+        <li class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-green-500 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Digital Tools Awareness: Insights into how tools can simplify school management tasks like finance, CBT, and results management.
+        </li>
+        <li class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-green-500 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Efficiency Demonstration: Real-life examples of how adopting tech tools can save time and improve performance.
+        </li>
+        <li class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-green-500 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Access to Solutions: A first-hand look at Techiekraft’s products, designed to transform school operations.
+        </li>
+        <li class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-green-500 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Enhanced Online Presence: Hosting schools benefit from tools and resources to boost their visibility and credibility online.
+        </li>
+        <li class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-green-500 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Access to free and trial tools for school management, such as financial management software, CBT applications, and result management systems as a result of partnering with Techiekraft.
+        </li>
+        <li class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-green-500 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Improved online presence.
+        </li>
+      </ul>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section class="contact-us py-20 bg-gray-50"id="contact-us">
+  <div class="container mx-auto px-6 lg:px-24">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Get In Touch -->
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Get In Touch</h3>
+        <p class="text-lg text-gray-600 mb-6">
+          Have questions or want to get involved with TechieTeen? We’d love to hear from you. Whether you're a student, parent, or educator, don’t hesitate to reach out for more information about our programs, partnerships, and opportunities.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-center space-x-4">
+            <i class="fas fa-envelope text-gray-600"></i>
+            <span class="text-gray-600">contact: techiekraft@gmail.com</span>
+          </div>
+          <div class="flex items-center space-x-4">
+            <i class="fas fa-phone-alt text-gray-600"></i>
+            <span class="text-gray-600">+234 810 590 1519</span>
+          </div>
+          <div class="flex items-center space-x-4">
+            <i class="fas fa-map-marker-alt text-gray-600"></i>
+            <span class="text-gray-600">7, Oremeji street, Off Agbeye Brown house, Eyita, Ikorodu, Lagos State</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Send Us a Message -->
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Send Us a Message</h3>
+        <form action="#" method="POST" class="space-y-6" onsubmit="sendToWhatsApp(event)">
+          {% csrf_token %}
+          <div>
+            <label for="name" class="block text-lg text-gray-800">Your Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Enter your name">
+          </div>
+          <div>
+            <label for="email" class="block text-lg text-gray-800">Your Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Enter your email">
+          </div>
+          <div>
+            <label for="message" class="block text-lg text-gray-800">Your Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Type your message"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600  text-white px-6 py-3 rounded-lg text-lg">
+            Send Message
+          </button>
+        </form>
+      </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-200 py-6">
+  <div class="container mx-auto text-center border-t border-gray-700 pt-6">
+    <p class="text-sm">
+      &copy; 2025 TechieTeen. All Rights Reserved. | <a href="mailto:techiekraft@gmail.com" class="text-green-400 hover:underline">contact@techieteen.com</a>
+    </p>
+  </div>
+</footer>
+
+
+
+  <script>
+    // Toggle hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function sendToWhatsApp(event) {
+    event.preventDefault();  // Prevent form from submitting normally
+
+    // Get form data
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // Debugging: Check if values are captured correctly
+    console.log("Name: " + name);
+    console.log("Email: " + email);
+    console.log("Message: " + message);
+
+    // Ensure all fields have values
+    if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    // Format the message to send to WhatsApp
+    var messageText = `*New Contact Message*\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+    // WhatsApp link format (replace '2349155775787' with your actual WhatsApp number)
+    var whatsappLink = `https://wa.me/2349155775787?text=${encodeURIComponent(messageText)}`;
+
+    // Debugging: Check the WhatsApp link before redirecting
+    console.log("WhatsApp Link: " + whatsappLink);
+
+    // Redirect to WhatsApp
+    window.location.href = whatsappLink;
+  }
+  </script>
+</body>
+</html>
