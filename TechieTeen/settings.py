@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DJANGO_ENVIRONMENT') != 'production'
 
 # Allowed Hosts (get from .env file)
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS''techiekraft.onrender.com').split(',')
 
 # Application definition
 INSTALLED_APPS = [
