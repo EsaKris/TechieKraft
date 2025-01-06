@@ -20,7 +20,6 @@ def register(request):
            
             return redirect("book_appointment", school_registration_id=registration.id)
         else:
-            # If form is not valid, handle that here (e.g., return with form errors)
             return render(request, "home/register.html", {"form": form})
     else:
         form = SchoolRegistrationForm()

@@ -60,9 +60,9 @@ class Appointment(models.Model):
     school_registration = models.ForeignKey(
         'SchoolRegistration',
         on_delete=models.CASCADE,
-        related_name="appointments",  # Optional: for reverse lookup
-        null=True,  # Allow nulls temporarily
-        blank=True  # Allow blank in forms temporarily
+        related_name="appointments",  
+        null=True,  
+        blank=True  
     )
     date = models.DateField(
         validators=[MinValueValidator(limit_value=date.today)]

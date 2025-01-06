@@ -33,11 +33,11 @@ class SchoolRegistrationForm(forms.ModelForm):
 
 
 
-# forms.py
+
 class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
-        fields = ['date', 'time']  # Separate date and time fields
+        fields = ['date', 'time']  
 
     date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
     time = forms.TimeField(widget=forms.TimeInput(attrs={'type': 'time'}))
