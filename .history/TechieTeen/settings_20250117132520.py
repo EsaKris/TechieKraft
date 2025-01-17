@@ -27,11 +27,11 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # Check environment and adjust DEBUG accordingly
 DEBUG = os.getenv('DJANGO_ENVIRONMENT') != 'production'
 
-# # Enable SSL/HTTPS settings
-# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-# SECURE_SSL_REDIRECT = True  
-# SESSION_COOKIE_SECURE = True  
-# CSRF_COOKIE_SECURE = True  
+# Enable SSL/HTTPS settings
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_SSL_REDIRECT =   F  
+SESSION_COOKIE_SECURE = True  
+CSRF_COOKIE_SECURE = True  
 
 # Allowed Hosts (get from .env file)
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'techiekraft.onrender.com').split(',')
